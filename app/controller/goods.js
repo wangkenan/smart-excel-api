@@ -36,7 +36,7 @@ class HomeController extends Controller {
     const res = {}
     res.list = await ctx.model.Table.findAll({
       order: [
-        ['id']
+        ['id', 'DESC']
       ],
       offset: offset,
       limit: payload.limit,
